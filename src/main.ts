@@ -1,7 +1,11 @@
-type indiceNumero = number
-type nombreNumero = string
+const BACKEND_API = 'https://www.midominio.com/api'
 
-const numeroUno: [indiceNumero, nombreNumero] = [1, 'uno']
-const numeroDos: [indiceNumero, nombreNumero] = [2, 'dos']
-const numeroTres: [indiceNumero, nombreNumero] = [3, 'tres']
+let PING: unknown = 80
 
+PING = null
+
+if (typeof PING === 'number') {
+  console.log('PING is a number')
+} else {
+  throw new Error('No hay conexion')
+}

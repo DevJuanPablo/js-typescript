@@ -1,4 +1,10 @@
 "use strict";
-const numeroUno = [1, 'uno'];
-const numeroDos = [2, 'dos'];
-const numeroTres = [3, 'tres'];
+const BACKEND_API = 'https://www.midominio.com/api';
+let PING = 80;
+PING = null;
+if (typeof PING === 'number') {
+    console.log('PING is a number');
+}
+else {
+    throw new Error('No hay conexion');
+}
