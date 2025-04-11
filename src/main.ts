@@ -4,8 +4,13 @@ let PING: unknown = 80
 
 PING = null
 
-if (typeof PING === 'number') {
-  console.log('PING is a number')
-} else {
-  throw new Error('No hay conexion')
+
+function validarPing(): void {
+  if (typeof PING === 'number') {
+    console.log('PING is a number')
+  } else {
+    throw new Error('No hay conexion')
+  }
 }
+
+validarPing()
