@@ -1,5 +1,5 @@
 "use strict";
-const saludo = (string) => {
-    console.log(`Hola ${string.toUpperCase()}`);
+const aceptaParesDel1al10 = (num) => {
+    return num % 2 === 0;
 };
-saludo('Mundo!');
+console.log(aceptaParesDel1al10(2)); // true
