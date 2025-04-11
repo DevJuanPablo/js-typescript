@@ -1,7 +1,26 @@
-type NumerosPares = 2 | 4 | 6 | 8 | 10
-
-const aceptaParesDel1al10 = (num: NumerosPares): boolean => {
-  return num % 2 === 0
+enum NACIONALIDAD {
+  BOL = "BOL",
+  ARG = "ARG",
+  CHI = "CHI"
 }
 
-console.log(aceptaParesDel1al10(2)) // true
+const verificarNacionalidad = (nacionalidad: string) => {
+  switch (nacionalidad) {
+    case NACIONALIDAD.BOL:
+      return "Boliviana"
+      break
+    case NACIONALIDAD.ARG:
+      return "Argentina"
+      break
+    case NACIONALIDAD.CHI:
+      return "Chilena"
+      break
+    default:
+      return "Extranjera"
+  }
+}
+
+console.log(verificarNacionalidad("BOL")) // Boliviana
+console.log(verificarNacionalidad("ARG")) // Argentina
+console.log(verificarNacionalidad("CHI")) // Chilena
+console.log(verificarNacionalidad("PER")) // Extranjera
