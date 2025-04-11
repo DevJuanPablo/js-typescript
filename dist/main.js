@@ -1,2 +1,5 @@
 "use strict";
-console.log('Hello, world part two!');
+const saludo = (string) => {
+    console.log(`Hola ${string}`);
+};
+saludo('Mundo!');
