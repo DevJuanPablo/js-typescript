@@ -1,26 +1,7 @@
-enum NACIONALIDAD {
-  BOL = "BOL",
-  ARG = "ARG",
-  CHI = "CHI"
-}
+type indiceNumero = number
+type nombreNumero = string
 
-const verificarNacionalidad = (nacionalidad: string) => {
-  switch (nacionalidad) {
-    case NACIONALIDAD.BOL:
-      return "Boliviana"
-      break
-    case NACIONALIDAD.ARG:
-      return "Argentina"
-      break
-    case NACIONALIDAD.CHI:
-      return "Chilena"
-      break
-    default:
-      return "Extranjera"
-  }
-}
+const numeroUno: [indiceNumero, nombreNumero] = [1, 'uno']
+const numeroDos: [indiceNumero, nombreNumero] = [2, 'dos']
+const numeroTres: [indiceNumero, nombreNumero] = [3, 'tres']
 
-console.log(verificarNacionalidad("BOL")) // Boliviana
-console.log(verificarNacionalidad("ARG")) // Argentina
-console.log(verificarNacionalidad("CHI")) // Chilena
-console.log(verificarNacionalidad("PER")) // Extranjera
