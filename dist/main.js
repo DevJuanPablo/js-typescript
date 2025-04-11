@@ -3,11 +3,6 @@ const BACKEND_API = 'https://www.midominio.com/api';
 let PING = 80;
 PING = null;
 function validarPing() {
-    if (typeof PING === 'number') {
-        console.log('PING is a number');
-    }
-    else {
-        throw new Error('No hay conexion');
-    }
+    throw new Error('No hay conexion');
 }
 validarPing();

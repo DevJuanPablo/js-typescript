@@ -5,12 +5,10 @@ let PING: unknown = 80
 PING = null
 
 
-function validarPing(): void {
-  if (typeof PING === 'number') {
-    console.log('PING is a number')
-  } else {
+function validarPing(): never {
+  
     throw new Error('No hay conexion')
-  }
+  
 }
 
 validarPing()
