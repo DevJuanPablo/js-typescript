@@ -1,5 +1,5 @@
-const saludo = (string: any) => {
-  console.log(`Hola ${string}`);
+const saludo = (string: string) => {
+  console.log(`Hola ${string.toUpperCase()}`);
 }
 
 saludo('Mundo!');
