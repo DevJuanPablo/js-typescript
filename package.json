@@ -1,0 +1,20 @@
+{
+  "name": "js-typescript",
+  "version": "1.0.0",
+  "description": "aprenderemos typescript",
+  "main": "index.js",
+  "scripts": {
+    "version": "tsc --version",
+    "config": "tsc --init"
+  },
+  "keywords": [
+    "typescript",
+    "javascript"
+  ],
+  "author": "dev.juanpablo.ortiz@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
