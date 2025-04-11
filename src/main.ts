@@ -1,1 +1,5 @@
-console.log('Hello, world part two!');
+const saludo = (string: any) => {
+  console.log(`Hola ${string}`);
+}
+
+saludo('Mundo!');
