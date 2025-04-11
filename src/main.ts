@@ -5,10 +5,12 @@ let PING: unknown = 80
 PING = null
 
 
-function validarPing(): never {
-  
+function validarPing(): void {
+  if (typeof PING !== 'undefined') {
+    console.log('Conectado')
+  } else {
     throw new Error('No hay conexion')
-  
+  }
 }
 
 validarPing()
