@@ -5,7 +5,7 @@ type AUTENTICADO = {
   level?: number
 }
 
-const estaAutenticado = (jwt: string, userId: string, role: string, level?: number): AUTENTICADO => {
+const estaAutenticado = (jwt: string, userId: string = 'admin', role: string = 'customer', level?: number): AUTENTICADO => {
   return {
     userId,
     jwt,
@@ -14,8 +14,11 @@ const estaAutenticado = (jwt: string, userId: string, role: string, level?: numb
   }
 }
 
-const respuesta = estaAutenticado('chavo123', 'chavo', 'admin')
+const respuesta = estaAutenticado('bnbmw688')
 console.log(respuesta)
 
-const respuesta2 = estaAutenticado('chavo123', 'chavo', 'admin', 0)
+const respuesta2 = estaAutenticado('bnkia360 ', 'chavo', 'admin')
 console.log(respuesta2) 
+
+const respuesta3 = estaAutenticado('bnfrri124', 'adrian')
+console.log(respuesta3)
