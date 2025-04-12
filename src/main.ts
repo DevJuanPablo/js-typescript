@@ -1,6 +1,3 @@
-type alfanumerico = string | number
-type numerico = number | undefined
+const canvas = document.getElementById('#canvas') as HTMLCanvasElement
 
-type KEY = alfanumerico & numerico
-
-const number: KEY = 2
+const context2D = canvas.getContext('2d')
