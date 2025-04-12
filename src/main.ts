@@ -1,5 +1,23 @@
-const boton = document.getElementById('btn')
+function Decorator(target: any) {
+  target.prototype.mail = 'jhondoe@mail.com'
+}
 
-boton?.addEventListener('click', () => {
-  alert('hola mundo')
-})
+interface User {
+  name: string
+  age: number
+  email: string
+}
+
+@Decorator
+class User {
+  name: string
+  age: number
+
+  constructor() {
+    this.name = ''
+    this.age = 0
+  }
+}
+
+const user = new User()
+console.log(user)
