@@ -1,46 +1,6 @@
-class ErrorResponse {
-  code: number = 404
-}
+type alfanumerico = string | number
+type numerico = number | undefined
 
-class SuccessResponse {
-  code: number = 200
-  response: string = 'ok'
-}
+type KEY = alfanumerico & numerico
 
-type Requested = ErrorResponse | SuccessResponse
-
-interface Res {
-  data: any,
-  code: number
-}
-
-async function get(req: Requested): Promise<Res> {
-  let res: Res = {
-    data: null,
-    code: 500
-  }
-
-  try {
-    const data = await fetch('https://example.com/api')
-
-    if (data) {
-      if (req instanceof ErrorResponse) {
-        res = {
-          data,
-          code: req.code
-        }
-      }
-    } else {
-      if (req instanceof SuccessResponse) {
-        res = {
-          data,
-          code: req.code
-        }
-      }
-    }
-  } catch (error) {
-    console.error('Error fetching data:', error)
-   } finally {
-    return res
-  }
-}
+const number: KEY = 2
