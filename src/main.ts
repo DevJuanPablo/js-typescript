@@ -1,31 +1,24 @@
-interface Base {
-  id: string,
-  address?: string,
-  email?: string,
+class Usuario {
+  private name: string
+  private email: string
+  private age: number
+
+  constructor(name: string, email: string, age: number) {
+    this.name = name
+    this.email = email
+    this.age = age
+  }
+
+  getName(): string {
+    return this.name
+  }
+
+  setName(name: string): void {
+    this.name = name
+  }
 }
 
-interface Usuario extends Base{
-  nombre: string,
-  edad: number,
-  ciudad: string,
-}
+const user = new Usuario('Juan Pablo', 'jp@mail.com', 46)
+user.setName('Juan Pablo Garcia')
 
-interface Persona extends Base{
-  phone: number
-}
-
-const usuario: Usuario = {
-  id: "123",
-  nombre: "Juan",
-  edad: 30,
-  ciudad: "Madrid",
-}
-
-const persona: Persona = {
-  id: "456",
-  address: "Calle Falsa 123",
-  phone: 123456789,
-  email: "miemail@mail.com"
-}
-
-console.log(usuario.edad)
+console.log(user.getName())
