@@ -1,3 +1,5 @@
-const canvas = document.getElementById('#canvas') as HTMLCanvasElement
+const boton = document.getElementById('btn')
 
-const context2D = canvas.getContext('2d')
+boton?.addEventListener('click', () => {
+  alert('hola mundo')
+})
