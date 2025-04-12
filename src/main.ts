@@ -1,16 +1,21 @@
-const BACKEND_API = 'https://www.midominio.com/api'
+type AUTENTICADO = {
+  jwt: string
+  userId: string
+  role: string
+  level?: number
+}
 
-let PING: unknown = 80
-
-PING = null
-
-
-function validarPing(): void {
-  if (typeof PING !== 'undefined') {
-    console.log('Conectado')
-  } else {
-    throw new Error('No hay conexion')
+const estaAutenticado = (jwt: string, userId: string, role: string, level?: number): AUTENTICADO => {
+  return {
+    userId,
+    jwt,
+    role,
+    level: level ?? 10
   }
 }
 
-validarPing()
+const respuesta = estaAutenticado('chavo123', 'chavo', 'admin')
+console.log(respuesta)
+
+const respuesta2 = estaAutenticado('chavo123', 'chavo', 'admin', 0)
+console.log(respuesta2) 
