@@ -1,18 +1,19 @@
-type ARGS = number | string | boolean
+// 1 returns 'uno'
+// 'uno' returns 1
 
-const argumentos = (...param: any[]): any[] => {
-    
-    return param
+type Params = number | string
+
+function transformaNumero(param: number): string
+function transformaNumero(param: string): number
+
+function transformaNumero(param: Params): Params {
+  if (typeof param === 'number') {
+    return param.toString()
+  } else if (typeof param === 'string') {
+    return parseInt(param, 10)
+  }
+  throw new Error('Invalid parameter type')
 }
 
-const usuario = {
-  name: 'Adrian',
-  email: 'correo@dominio.com',
-  edad: 30
-}
-
-const resultado = argumentos(1, 2, 3, "Hola", true, false, "Adios")
-console.log(resultado) // [ 1, 2, 3, 'Hola', true, false, 'Adios' ] 
-
-const resultado2 = argumentos(usuario)
-console.log(resultado2)
+//console.log(transformaNumero('uno'))
+console.log(transformaNumero(1))
